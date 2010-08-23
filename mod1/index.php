@@ -161,6 +161,9 @@ class  tx_greenhouse_module1 extends t3lib_SCbase {
 								$data = str_replace("TYPO3 Website",$_REQUEST["project-title"],$data);
 								$data = str_replace("__project-alias__",$_REQUEST["project-alias"],$data);
 								$data = str_replace("localhost/typo3-tpl",rtrim($_REQUEST["project-domain"],"/"),$data);
+								#$data = str_replace("Famelo","TYPO3 Website",$data);
+								#$data = str_replace("famelo","__project-alias__",$data);
+								#$data = str_replace("famelo.com","localhost/melo_typo3",$data);
 								$info = "Project Title: ".$_REQUEST["project-title"]."\nProject Alias: ".$_REQUEST["project-alias"]."\nProject Domain: ".$_REQUEST["project-domain"];
 								$data = str_replace("</notes>","\n".$info."</notes>",$data);
 								$data = preg_replace("#<created>[^<]+</created>#","<created>". strftime('%A %e. %B %Y', time())."</created>",$data);
